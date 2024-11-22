@@ -8,7 +8,7 @@ export default function Home() {
       <div className="bg-white shadow-lg rounded-3xl max-w-7xl w-full flex flex-col md:flex-row gap-8">
         {/* Left Section */}
         <div className="p-6 md:p-10 md:w-1/2 space-y-8 flex flex-col justify-center order-2 md:order-1">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-blue-900 justify-center">
+          <h1 align="center" className="text-3xl sm:text-4xl font-extrabold text-blue-900 justify-center">
             Your New Apartment in Dubai Awaits!
           </h1>
           <p className="text-base sm:text-lg text-blue-600 font-medium">
