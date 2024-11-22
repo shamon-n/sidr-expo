@@ -51,7 +51,7 @@ const Form: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center w-[70%]">
+    <div className="flex justify-center w-[90%]">
       <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-none">
         <div>
           <label
