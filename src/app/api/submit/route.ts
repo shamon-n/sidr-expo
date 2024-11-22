@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
     }
     const mailOptions = {
       from: process.env.SMTP_USER,
-      to: "shamon@solutionminds.in",
+      to: "kingdomleadsmanager@gmail.com",
       subject: "New Apartment Inquiry",
       text: `New Inquiry Details:
           Name: ${body.name}

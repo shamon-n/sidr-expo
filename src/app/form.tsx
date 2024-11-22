@@ -51,74 +51,76 @@ const Form: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div>
-        <label
-          htmlFor="name"
-          className="block text-sm font-medium text-gray-700"
+    <div className="flex justify-center w-[70%]">
+      <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-md">
+        <div>
+          <label
+            htmlFor="name"
+            className="block text-sm font-semibold text-gray-700"
+          >
+            Your Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Enter Full Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="phone"
+            className="block text-sm font-semibold text-gray-700"
+          >
+            Your Phone Number
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="+971 52 123 4567"
+            value={formData.phone}
+            onChange={handleChange}
+            className="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="email"
+            className="block text-sm font-semibold text-gray-700"
+          >
+            Your Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="example@gmail.com"
+            value={formData.email}
+            onChange={handleChange}
+            className="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition"
         >
-          Your Name
-        </label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Enter Full Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-        />
-      </div>
-      <div>
-        <label
-          htmlFor="phone"
-          className="block text-sm font-medium text-gray-700"
-        >
-          Your Phone Number
-        </label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          placeholder="+971 52 123 4567"
-          value={formData.phone}
-          onChange={handleChange}
-          className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-        />
-      </div>
-      <div>
-        <label
-          htmlFor="email"
-          className="block text-sm font-medium text-gray-700"
-        >
-          Your Email
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="example@gmail.com"
-          value={formData.email}
-          onChange={handleChange}
-          className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-        />
-      </div>
-      <button
-        type="submit"
-        className="w-full bg-indigo-600 text-white font-bold py-3 rounded-md hover:bg-indigo-700 transition"
-      >
-        Get Details and Special Offers
-      </button>
-      {status.message && (
-        <p
-          className={`mt-4 text-sm ${
-            status.success ? "text-green-600" : "text-red-600"
-          }`}
-        >
-          {status.message}
-        </p>
-      )}
-    </form>
+          Get Details and Special Offers
+        </button>
+        {status.message && (
+          <p
+            className={`mt-4 text-sm ${
+              status.success ? "text-green-600" : "text-red-600"
+            }`}
+          >
+            {status.message}
+          </p>
+        )}
+      </form>
+    </div>
   );
 };
 
