@@ -40,21 +40,25 @@ export default function Home() {
         >
           <h1
             className={`${
-              isSmallScreen && "text-center  "
-            }text-3xl sm:text-4xl font-extrabold text-[#034771] justify-center content-center font-sans text-[24px]`}
+              isSmallScreen && "text-center text-[24px] "
+            }text-3xl sm:text-4xl font-extrabold text-[#034771] justify-center content-center font-sans text-[28px]`}
           >
             Your New Apartment in Dubai Awaits!
           </h1>
-          <div className={`border-b border-lightgray-900 w-1/4 mx-auto `}></div>
+          <div
+            className={`border-b border-lightgray-900 w-1/4 ${
+              isSmallScreen && "mx-auto"
+            } `}
+          ></div>
           <p
-            className={`sm:text-lg text-[#0678bc] font-bold font-sans text-[20px]  ${
+            className={`sm:text-lg text-[#0678bc] font-bold font-sans text-[24px]  ${
               isSmallScreen
                 ? "mt-[-65px] text-center justify-center content-center text-[20px]"
                 : "md:mt-0"
             }`}
           >
-            The luxurious Sidr Residences in the prestigious district of Expo
-            City Dubai.
+            The luxurious Sidr Residences in the {!isSmallScreen && <br />}{" "}
+            prestigious district of Expo City Dubai.
           </p>
           <p className="text-sm sm:text-base text-gray-500 font-light">
             Fill in the form and our expert will contact you.
