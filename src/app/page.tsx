@@ -77,7 +77,7 @@ export default function Home() {
               isSmallScreen
                 ? "w-[95%] min-h-[30vh] max-h-[40vh]"
                 : "w-[95%] h-[95%]"
-            } bg-gray-100 rounded-2xl overflow-hidden`}
+            } bg-gray-100  overflow-hidden`}
           >
             <Image
               src="https://cdn.uae-flats.com/public/uploads/Whats_App_Image_2024_11_06_at_10_23_55_1_ab689e6784.jpeg"
@@ -88,7 +88,7 @@ export default function Home() {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                borderRadius: "1rem",
+                // borderRadius: "1rem",
               }}
             />
           </div>
