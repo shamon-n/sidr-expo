@@ -49,7 +49,7 @@ export default function Home() {
           <p
             className={`sm:text-lg text-[#0678bc] font-bold font-sans text-[24px]  ${
               isSmallScreen
-                ? "mt-[-25px] text-center justify-center content-center text-[20px]"
+                ? "mt-[-65px] text-center justify-center content-center text-[20px]"
                 : "md:mt-0"
             }`}
           >
