@@ -51,9 +51,9 @@ export default function Home() {
             } `}
           ></div>
           <p
-            className={`sm:text-lg text-[#0678bc] font-bold font-sans text-[24px]  ${
+            className={`sm:text-lg text-[#0678bc] font-bold font-sans text-[20px]  ${
               isSmallScreen
-                ? "mt-[-65px] text-center justify-center content-center text-[20px]"
+                ? "mt-[-65px] text-center justify-center content-center text-[19px]"
                 : "md:mt-0"
             }`}
           >
