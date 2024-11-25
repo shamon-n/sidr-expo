@@ -45,7 +45,7 @@ export default function Home() {
           >
             Your New Apartment in Dubai Awaits!
           </h1>
-          {/* <div className={`border-b border-lightgray-900 w-1/4 mx-auto `}></div> */}
+          <div className={`border-b border-lightgray-900 w-1/4 mx-auto `}></div>
           <p
             className={`sm:text-lg text-[#0678bc] font-bold font-sans text-[20px]  ${
               isSmallScreen
