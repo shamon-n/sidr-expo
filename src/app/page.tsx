@@ -34,8 +34,8 @@ export default function Home() {
       >
         {/* Left Section */}
         <div
-          className={`p-6 md:p-10 md:w-1/2 space-y-2 flex flex-col justify-center order-2 md:order-1 ${
-            isSmallScreen ? "mt-[-45px]" : "md:mt-0"
+          className={`p-6 md:p-10 md:w-1/2  flex flex-col justify-center order-2 md:order-1 ${
+            isSmallScreen ? "mt-[-45px] space-y-2" : "md:mt-0 space-y-6"
           }`}
         >
           <h1
