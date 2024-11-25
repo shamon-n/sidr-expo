@@ -21,28 +21,48 @@ export default function Home() {
     <div
       className={`${
         isSmallScreen
-          ? "bg-white  min-h-screen flex justify-center items-center p-0"
-          : " min-h-screen flex justify-center items-center p-6 bg-gray-100"
-      } `}
+          ? "bg-white min-h-screen flex justify-center items-center p-0"
+          : "min-h-screen flex justify-center items-center p-6 bg-gray-100"
+      }`}
     >
-      <div className="bg-white shadow-lg rounded-3xl max-w-7xl w-full flex flex-col md:flex-row gap-8">
+      <div
+        className="bg-white shadow-lg rounded-3xl w-full flex flex-col md:flex-row gap-8"
+        style={{
+          maxWidth: "90rem",
+          minHeight: "80vh",
+        }}
+      >
         {/* Left Section */}
-        <div className="p-6 md:p-10 md:w-1/2 space-y-8 flex flex-col justify-center order-2 md:order-1 mt-[-40px] sm:mt-[-80px] md:mt-0">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-blue-900 justify-center content-center">
+        <div
+          className={`p-6 md:p-10 md:w-1/2 space-y-8 flex flex-col justify-center order-2 md:order-1 ${
+            isSmallScreen ? "mt-[-55px]" : "md:mt-0"
+          }`}
+        >
+          <h1
+            className={`${
+              isSmallScreen && "text-center  "
+            }text-3xl sm:text-4xl font-extrabold text-[#034771] justify-center content-center font-sans text-[24px]`}
+          >
             Your New Apartment in Dubai Awaits!
           </h1>
-          <p className="text-base sm:text-lg text-blue-600 font-medium">
+          <div className={`border-b border-lightgray-900 w-1/4 mx-auto `}></div>
+          <p
+            className={`sm:text-lg text-[#0678bc] font-bold font-sans text-[24px]  ${
+              isSmallScreen
+                ? "mt-[-25px] text-center justify-center content-center text-[20px]"
+                : "md:mt-0"
+            }`}
+          >
             The luxurious Sidr Residences in the prestigious district of Expo
             City Dubai.
           </p>
           <p className="text-sm sm:text-base text-gray-500 font-light">
             Fill in the form and our expert will contact you.
           </p>
-          <Form />
+          <Form isSmallScreen={isSmallScreen} />
         </div>
 
         {/* Right Section (Image) */}
-
         <div
           className={`relative md:w-1/2 flex justify-center items-center order-1 md:order-2 ${
             isSmallScreen ? "pt-2" : "md:pt-0"

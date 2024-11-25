@@ -7,8 +7,10 @@ interface FormData {
   phone: string;
   email: string;
 }
-
-const Form: React.FC = () => {
+interface FormProps {
+  isSmallScreen: boolean;
+}
+const Form: React.FC<FormProps> = ({ isSmallScreen }) => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     phone: "",
@@ -51,12 +53,17 @@ const Form: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center w-[90%]">
+    <div
+      className={`flex justify-center ${
+        isSmallScreen ? "w-[100%]" : "w-[60%]"
+      } `}
+    >
       <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-none">
-        <div>
+        {/* Name Input */}
+        <div className="relative">
           <label
             htmlFor="name"
-            className="block text-sm font-semibold text-gray-700"
+            className="absolute -top-2.5 left-3 bg-white px-1 text-xs text-blue-900 font-semibold"
           >
             Your Name
           </label>
@@ -67,13 +74,15 @@ const Form: React.FC = () => {
             placeholder="Enter Full Name"
             value={formData.name}
             onChange={handleChange}
-            className="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition"
           />
         </div>
-        <div>
+
+        {/* Phone Input */}
+        <div className="relative">
           <label
             htmlFor="phone"
-            className="block text-sm font-semibold text-gray-700"
+            className="absolute -top-2.5 left-3 bg-white px-1 text-xs text-blue-900 font-semibold"
           >
             Your Phone Number
           </label>
@@ -84,13 +93,15 @@ const Form: React.FC = () => {
             placeholder="+971 52 123 4567"
             value={formData.phone}
             onChange={handleChange}
-            className="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition"
           />
         </div>
-        <div>
+
+        {/* Email Input */}
+        <div className="relative">
           <label
             htmlFor="email"
-            className="block text-sm font-semibold text-gray-700"
+            className="absolute -top-2.5 left-3 bg-white px-1 text-xs text-blue-900 font-semibold	"
           >
             Your Email
           </label>
@@ -101,15 +112,19 @@ const Form: React.FC = () => {
             placeholder="example@gmail.com"
             value={formData.email}
             onChange={handleChange}
-            className="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition"
           />
         </div>
+
+        {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition"
+          className="w-full bg-green-600 text-white font-bold py-3 rounded-lg shadow-md hover:bg-green-700 transition"
         >
           Get Details and Special Offers
         </button>
+
+        {/* Status Message */}
         {status.message && (
           <p
             className={`mt-4 text-sm ${
