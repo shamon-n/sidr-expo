@@ -42,8 +42,32 @@ export default function Home() {
         </div>
 
         {/* Right Section (Image) */}
-        <div className="relative md:w-1/2 flex justify-center items-center order-1 md:order-2 pt-2 sm:pt-[-20px] md:pt-0">
+        {/* <div className="relative md:w-1/2 flex justify-center items-center order-1 md:order-2 pt-2 sm:pt-[-20px] md:pt-0">
           <div className="w-[95%] h-[95%] bg-gray-100 rounded-2xl overflow-hidden">
+            <Image
+              src="https://cdn.uae-flats.com/public/uploads/Whats_App_Image_2024_11_06_at_10_23_55_1_ab689e6784.jpeg"
+              alt="Sidr Residences"
+              width={isSmallScreen ? 100 : 900}
+              height={isSmallScreen ? 100 : 900}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "1rem",
+              }}
+            />
+          </div>
+        </div> */}
+        <div
+          className={`relative md:w-1/2 flex justify-center items-center order-1 md:order-2 ${
+            isSmallScreen ? "pt-2" : "md:pt-0"
+          }`}
+        >
+          <div
+            className={`${
+              isSmallScreen ? "w-[95%] h-[40%]" : "w-[95%] h-[95%]"
+            } bg-gray-100 rounded-2xl overflow-hidden`}
+          >
             <Image
               src="https://cdn.uae-flats.com/public/uploads/Whats_App_Image_2024_11_06_at_10_23_55_1_ab689e6784.jpeg"
               alt="Sidr Residences"
