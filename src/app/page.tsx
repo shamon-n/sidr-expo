@@ -34,20 +34,20 @@ export default function Home() {
       >
         {/* Left Section */}
         <div
-          className={`p-6 md:p-10 md:w-1/2 space-y-8 flex flex-col justify-center order-2 md:order-1 ${
+          className={`p-6 md:p-10 md:w-1/2 space-y-6 flex flex-col justify-center order-2 md:order-1 ${
             isSmallScreen ? "mt-[-55px]" : "md:mt-0"
           }`}
         >
           <h1
             className={`${
               isSmallScreen && "text-center text-[24px] "
-            }text-3xl sm:text-4xl font-extrabold text-[#034771] justify-center content-center font-sans text-[28px]`}
+            }text-3xl sm:text-4xl font-extrabold text-[#034771] justify-center content-center font-sans text-[28px] `}
           >
             Your New Apartment in Dubai Awaits!
           </h1>
           <div
             className={`border-b border-lightgray-900 w-1/4 ${
-              isSmallScreen && "mx-auto"
+              isSmallScreen && "mx-auto pt-[-20px]"
             } `}
           ></div>
           <p
